@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 router(app);
 
-port = 3000;
+port = 80;
 app.listen(port);
 module.exports = app;
 console.log('Listening on localhost:' + port);
