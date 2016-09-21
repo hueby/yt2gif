@@ -4,11 +4,13 @@ exports.getInfo = function(req, res, next) {
   youtubedl.getInfo(url, [],  function(err, info) {
     if (err) {
       res.json({
+        status: 404,
         title: "Not found",
         duration: "Invalid URL"
       });
     } else {
       res.status(200).json({
+        status: 200,
         title: info.title,
         duration: info.duration
       });
