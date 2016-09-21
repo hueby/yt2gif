@@ -23,6 +23,7 @@
   "bugs": {
     "url": "https://github.com/hueby/yt2gif/issues"
   },
+
   "homepage": "https://github.com/hueby/yt2gif#readme",
   "dependencies": {
     "express": "^4.14.0",
