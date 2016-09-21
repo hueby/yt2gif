@@ -16,6 +16,7 @@ var appViewModel = function () {
       });
     } else {
       self.result("Enter valid YouTube URL");
+      self.duration("");
     }
   };
 };
