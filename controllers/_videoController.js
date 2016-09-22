@@ -12,11 +12,17 @@ exports.getInfo = function(req, res, next) {
       res.status(200).json({
         status: 200,
         title: info.title,
-        duration: info.duration
+        duration: getDuration(info.duration)
       });
     }
   });
 };
+
+// check if seconds are well formatted
+function getDuration(duration) {
+  exp = duration.split(':');
+  return (exp[1].length === 1 ? exp[0] + ':0' + exp[1] : duration);
+}
 
 exports.getVideo = function(req, res, next) {
   res.status(404);
