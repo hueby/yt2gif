@@ -11,15 +11,15 @@ html
       input(type="text" data-bind="value: yturl, valueUpdate: 'input', event: { change: fetch }")
     
       p(data-bind="text: result") Titel: 
-      p(data-bind='text: duration') Dauer: 
+      p(data-bind='text: duration') Duration: 
 
       div(data-bind="with: videoData")
         label(style="block") Start
         input(type="text" data-bind="value: start")
         br
-        label(style="block") L&auml;nge
+        label(style="block") Duration
         input(type="text" data-bind="value: duration")
-        button(type="submit") Convert
+        button(type="submit") GIF ME!
 
     script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js')
     script(type='text/javascript' src='https://code.jquery.com/jquery-3.1.0.min.js')
