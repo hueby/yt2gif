@@ -1,11 +1,13 @@
-express = require('express');
-_homeController = require('./controllers/_homeController');
-_videoController = require('./controllers/_videoController');
+
+var express = require('express');
+var _homeController = require('./controllers/_homeController');
+var _videoController = require('./controllers/_videoController');
 
 module.exports = function (app) {
-  apiRoutes = express.Router();
+  var apiRoutes = express.Router();
   
   apiRoutes.get('/', _homeController.index);
+
   apiRoutes.get('/getInfo/:url', _videoController.getInfo);
   apiRoutes.get('/getVideo', _videoController.getVideo);
 

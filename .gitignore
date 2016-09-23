@@ -27,6 +27,8 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+typings
+.vscode
 
 # Optional npm cache directory
 .npm
@@ -36,3 +38,4 @@ jspm_packages
 
 #vim files
 *.swp
+

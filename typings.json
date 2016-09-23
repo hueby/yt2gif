@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "registry:npm/express#4.14.0+20160922175659"
+  },
+  "globalDependencies": {
+    "express": "registry:dt/express#4.0.0+20160708185218",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160923124352",
+    "node": "registry:dt/node#6.0.0+20160923124626",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
+  }
+}

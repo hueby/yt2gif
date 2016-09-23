@@ -28,3 +28,5 @@ function getDuration(duration) {
 exports.getVideo = function(req, res, next) {
   res.status(404);
 };
+
+

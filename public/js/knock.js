@@ -11,6 +11,7 @@ var appViewModel = function () {
     self.videoData(null);
     self.result("");
     self.duration("");
+    ext = "sdas";
     
     ytprefix = 'https://www.youtube.com/watch?v=';
     var ytid = self.yturl().replace(ytprefix, '');
