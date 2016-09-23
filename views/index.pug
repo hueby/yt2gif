@@ -3,22 +3,25 @@ html
   head
     title Youtube 2 GIF Converter
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" href="css/style.css")
   body
-    h1 Enter YouTube URL
+    div(class="site-wrapper")
+      h1 Enter YouTube URL
 
-    input(type="text" data-bind="value: yturl, valueUpdate: 'input', event: { change: fetch }")
+      input(type="text" data-bind="value: yturl, valueUpdate: 'input', event: { change: fetch }")
     
-    p(data-bind="text: result") Titel: 
-    p(data-bind='text: duration') Dauer: 
+      p(data-bind="text: result") Titel: 
+      p(data-bind='text: duration') Dauer: 
 
-    div(data-bind="with: videoData")
-      p Start
-      input(type="text" data-bind="value: start")
-      p L&auml;nge
-      input(type="text" data-bind="value: duration")
-      button(type="submit") Convert
+      div(data-bind="with: videoData")
+        label(style="block") Start
+        input(type="text" data-bind="value: start")
+        br
+        label(style="block") L&auml;nge
+        input(type="text" data-bind="value: duration")
+        button(type="submit") Convert
 
     script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js')
-    script(src='https://code.jquery.com/jquery-3.1.0.min.js')
+    script(type='text/javascript' src='https://code.jquery.com/jquery-3.1.0.min.js')
     script(type='text/javascript' src='js/knock.js')
 
