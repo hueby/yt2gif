@@ -1,7 +1,11 @@
 module.exports = {
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "jquery": true
+    },
+    "globals": {
+        "ko": 1
     },
     "extends": "eslint:recommended",
     "rules": {
