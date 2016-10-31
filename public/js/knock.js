@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=Rdl-iHX9ZaY
+
 var appViewModel = function () {
   var self = this;
 
@@ -12,28 +14,22 @@ var appViewModel = function () {
     self.result('');
     self.duration('');
 
-    var ytprefix = 'https://www.youtube.com/watch?v=';
+    var ytprefix = 'http://www.youtube.com/watch?v=';
     var ytid = self.yturl().replace(ytprefix, '');
     var url = '/getInfo/' + ytid;
     $.getJSON(url, null, function (results) {
-      if (results.status === 200) {
+      switch (results.status) {
+      case 200:
         self.videoData({ start: '0:00', duration: '0' });
         self.result('Titel: "' + results.title + '"');
         self.duration('Dauer: ' + results.duration);
-      } else {
+        break;
+      default:
         self.result('Invalid URL');
+        break;
       }
     });
   };
 };
 
 ko.applyBindings(new appViewModel());
-
-/*
- * var self = this;
- * self.firstName = ko.observable();
- * firstName is now a function/class (knockout things)
- * if I do now this: self.firstName = 'Dennis' firstname becomes a string
- * this is what we dont want to have, if firstName is observable
- * instead do this: self.firstName('Dennis');
- * */
